@@ -4,3 +4,95 @@ obj
 
 # mstest test results
 TestResults
+
+# Ignore Visual Studio files
+*.cachefile
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.ncb
+*.suo
+*.exp
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.opensdf
+*.scc
+Debug*/
+obj/
+Release*/
+_ReSharper*/
+BuildLog.*
+*.pidb
+*.userprefs
+*.vs10x
+*.ncrunchsolution
+
+# Disallow all binary and content files
+*.dll
+#allow for tools: *.png
+*.bmp
+*.jpg
+*.jpeg
+*.gif
+#allow for icons: *.ico
+*.tga
+*.tif
+*.dae
+#allow for engine assemblies .xml documentation: *.xml
+*Font.xml
+*.glessl
+*.rgb
+*.rgba
+*.rgba4
+*.dds
+*.psd
+*.max
+*.3ds
+*.mp3
+*.wav
+*.avi
+*.ttf
+*.font
+*.pdf
+*.doc
+*.docx
+*.img
+*.mov
+*.mpg
+*.img
+*.mp4
+*.m4v
+*.wma
+*.wmv
+*.mov
+*.bin
+*.iso
+.svn/
+*.svn
+#allow for vs templates: *.zip
+*.rar
+*.7z
+*.chm
+*.help
+#allow for readme.txt: *.txt
+*.html
+*.htm
+*.orig
+*.css
+*.xslt
+*.swf
+*.JPG
+*.xnb
+*.db
+_UpgradeReport_Files/
+Tools/Settings.xml

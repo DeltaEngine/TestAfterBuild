@@ -1,0 +1,26 @@
+﻿<Window x:Class="DeltaEngine.TestAfterBuild.SettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="DeltaEngine - TestAfterBuild"
+				Height="200" Width="500">
+	<Grid>
+		<Label Content="Command to run after each successful build" HorizontalAlignment="Left" Margin="10,10,0,0"
+					 ToolTip="Note: When using .NET Demon, this is executed after each keypress :)"
+		       VerticalAlignment="Top" Grid.ColumnSpan="2" />
+		<ComboBox HorizontalAlignment="Left" Margin="12,34,0,0" VerticalAlignment="Top" Width="462" IsEditable="True"
+		          Name="SelectedCommand" />
+		<CheckBox Content="After executing the command wait 60 seconds before executing again" HorizontalAlignment="Left"
+		          Margin="10,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.225,0.8"
+							Name="UseWaitTime"/>
+		<Label Content="Wait time in seconds:" Margin="25,87,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"
+		       Width="128" />
+		<TextBox HorizontalAlignment="Left" Height="23" Margin="158,90,0,0" TextWrapping="Wrap" Text="60"
+		         VerticalAlignment="Top" Width="66" Name="WaitTime" TextChanged="WaitTimeChanged" />
+		<Button Content="Disable Resharper TestRunner BuildSetting" HorizontalAlignment="Left" Margin="10,131,0,0"
+		        VerticalAlignment="Top" Width="246" RenderTransformOrigin="-0.053,0" Click="DisableResharperBuildSettingsClicked"
+		        ToolTip="When we just successfully compiled there is no reason for ReSharper to rebuild everything again. .NET Demon also conflicts with it and it is more safe to set ReSharpers build settings to Never." />
+		<Button Content="Disable" HorizontalAlignment="Left" Margin="308,131,0,0" VerticalAlignment="Top" Width="75"
+		        Click="DisableClicked" />
+		<Button Content="Save" HorizontalAlignment="Left" Margin="399,131,0,0" VerticalAlignment="Top" Width="75"
+		        Click="SaveClicked" />
+	</Grid>
+</Window>
