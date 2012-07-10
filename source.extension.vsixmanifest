@@ -1,18 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="ede6f27f-08b8-426a-948d-9c23965753dd" Version="1.0" Language="en-US" Publisher="Delta Engine" />
-    <DisplayName>TestAfterBuild</DisplayName>
-    <Description>Automatically runs all Resharper Session unit tests (or just the last test) after each build. Also makes sense in combination with .NET Demon to provide continuous testing which each keystroke.</Description>
-  </Metadata>
-  <Installation InstalledByMsi="false">
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
-  </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
-    <Dependency Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" d:Source="Installed" Version="11.0" />
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
-</PackageManifest>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="ede6f27f-08b8-426a-948d-9c23965753dd">
+    <Name>TestAfterBuild</Name>
+    <Author>Delta Engine</Author>
+    <Version>0.0.0.0</Version>
+    <Description xml:space="preserve">Automatically runs unit tests (Resharper, TestDriven, NUnit) after each build. Also works in combination with .NET Demon to provide continuous testing with each keystroke.</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+		<VisualStudio Version="10.0">
+			<Edition>Ultimate</Edition>
+			<Edition>Premium</Edition>
+			<Edition>Pro</Edition>
+		</VisualStudio>
+		<VisualStudio Version="11.0">
+			<Edition>Ultimate</Edition>
+			<Edition>Premium</Edition>
+			<Edition>Pro</Edition>
+		</VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+      <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>
